@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orderscreen/views/pages/widgets/address_form_widget.dart';
 // import 'package:flutter_svg/svg.dart';
 // import 'package:orderscreen/views/pages/widgets/button.dart';
 // import 'package:orderscreen/views/pages/widgets/order_input.dart';
@@ -49,7 +50,10 @@ class Address extends StatelessWidget {
                 ],
               ),
             ),
-
+            const AddressFormWidget(
+              labelText: 'Sender details',
+              searchLabel: 'Search',
+            ),
           ],
         ),
       ),
