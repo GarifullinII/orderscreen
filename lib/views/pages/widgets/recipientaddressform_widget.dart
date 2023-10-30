@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../utils/constants.dart';
+import '../address.dart';
 import 'button.dart';
 import 'order_input.dart';
 
@@ -34,7 +35,14 @@ class RecipientAddressFormWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Button(
-                  interact: () {},
+                  interact: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Address(),
+                      ),
+                    );
+                  },
                   label: 'Add address',
                   style: ElevatedButton.styleFrom(
                     elevation: 1,

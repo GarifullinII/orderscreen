@@ -14,7 +14,10 @@ class Address extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: TopBar(label: 'Ordering'),
+      appBar: TopBar(
+        label: 'Ordering',
+        leadAction: false,
+      ),
       body: SingleChildScrollView(
         child: Column(),
       ),
