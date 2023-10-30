@@ -9,10 +9,12 @@ class AddressFormWidget extends StatelessWidget {
   /// Constructor
   /// @param labelText - Label with order or address
   /// @param searchLabel - Label with search details
+  /// @param addressLabel - Label with address details
 
   const AddressFormWidget({
     required this.labelText,
     this.searchLabel,
+    this.addressLabel,
     super.key,
   });
 
@@ -21,6 +23,9 @@ class AddressFormWidget extends StatelessWidget {
 
   /// Label with search details
   final String? searchLabel;
+
+  /// Label with address details
+  final String? addressLabel;
 
   @override
   Widget build(BuildContext context) {
@@ -94,6 +99,7 @@ class AddressFormWidget extends StatelessWidget {
             widgetOverTextField: const Spacer(),
             valueMaxLines: 2,
             showPrefixIcon: false,
+            hint: addressLabel ?? '',
           ),
         ],
       ),

@@ -121,15 +121,33 @@ class _OrderInputState extends State<OrderInput> {
               validator: widget.validator,
               cursorColor: ColorConstants.labelColor,
               cursorWidth: 1.5,
-              cursorRadius: const Radius.circular(20),
-              style: TextStyle(
+              cursorRadius: const Radius.circular(12),
+              style: widget.showPrefixIcon ? TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
                 color: ColorConstants.labelColor,
+              ) : TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+                color: ColorConstants.activeButtonTextColor,
               ),
               maxLines: widget.valueMaxLines ?? 1,
               decoration: InputDecoration(
+                filled: widget.showPrefixIcon ? false : true,
+                fillColor: ColorConstants.labelColor,
+                suffixIcon: widget.showPrefixIcon
+                    ? null
+                    : Padding(
+                      padding: const EdgeInsets.only(bottom: 20.0),
+                      child: Image.asset(
+                        'assets/images/edit.png',
+                        height: 20,
+                        width: 20,
+                        color: ColorConstants.activeButtonTextColor,
+                      ),
+                    ),
                 prefixIcon: widget.showPrefixIcon
                     ? Padding(
                         padding: const EdgeInsets.all(12),
@@ -137,12 +155,19 @@ class _OrderInputState extends State<OrderInput> {
                       )
                     : null,
                 hintText: widget.hint,
-                hintStyle: TextStyle(
-                  fontFamily: 'Roboto',
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
-                  color: ColorConstants.labelColor,
-                ),
+                hintStyle: widget.showPrefixIcon
+                    ? TextStyle(
+                        fontFamily: 'Roboto',
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: ColorConstants.labelColor,
+                      )
+                    : TextStyle(
+                        fontFamily: 'Roboto',
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: ColorConstants.activeButtonTextColor,
+                      ),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
                   borderSide: BorderSide(
