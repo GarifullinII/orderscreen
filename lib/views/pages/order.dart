@@ -79,6 +79,32 @@ class Order extends StatelessWidget {
               ),
             ),
             const RecipientAddressFormWidget(),
+            Padding(
+              padding: const EdgeInsets.only(top: 16, bottom: 26),
+              child: Button(
+                interact: () {},
+                style: ElevatedButton.styleFrom(
+                  elevation: 1,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(36),
+                  ),
+                  foregroundColor: ColorConstants.activeButtonColor,
+                  backgroundColor: ColorConstants.inactiveButtonColor,
+                  shadowColor: ColorConstants.activeButtonColor,
+                  minimumSize: const Size(335, 53),
+                ),
+                child: Text(
+                  'Next step',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    color: ColorConstants.inactiveButtonTextColor,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -98,8 +124,7 @@ class SenderDetailsFormWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding:
-                const EdgeInsets.only(left: 20, top: 20, bottom: 16),
+            padding: const EdgeInsets.only(left: 20, top: 20, bottom: 16),
             child: Text(
               'Sender details',
               style: TextStyle(
@@ -164,8 +189,7 @@ class SenderDetailsFormWidget extends StatelessWidget {
             hint: '+375726014690',
           ),
           Padding(
-            padding:
-                const EdgeInsets.only(left: 20, top: 16, right: 20),
+            padding: const EdgeInsets.only(left: 20, top: 16, right: 20),
             child: Divider(
               color: ColorConstants.dividerColor,
               height: 0.5,
@@ -213,8 +237,7 @@ class SenderDetailsFormWidget extends StatelessWidget {
               onPressed: () {},
               style: ButtonStyle(
                 padding: MaterialStateProperty.all(EdgeInsets.zero),
-                overlayColor:
-                    MaterialStateProperty.all(Colors.transparent),
+                overlayColor: MaterialStateProperty.all(Colors.transparent),
               ),
               child: Text(
                 'Add address line +',
@@ -260,8 +283,7 @@ class RecipientAddressFormWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding:
-            const EdgeInsets.only(left: 20, top: 20, bottom: 16),
+            padding: const EdgeInsets.only(left: 20, top: 20, bottom: 16),
             child: Text(
               'Recipient address',
               style: TextStyle(
@@ -326,8 +348,7 @@ class RecipientAddressFormWidget extends StatelessWidget {
             hint: '+375294545687',
           ),
           Padding(
-            padding:
-            const EdgeInsets.only(left: 20, top: 16, right: 20),
+            padding: const EdgeInsets.only(left: 20, top: 16, right: 20),
             child: Divider(
               color: ColorConstants.dividerColor,
               height: 0.5,
@@ -375,8 +396,7 @@ class RecipientAddressFormWidget extends StatelessWidget {
               onPressed: () {},
               style: ButtonStyle(
                 padding: MaterialStateProperty.all(EdgeInsets.zero),
-                overlayColor:
-                MaterialStateProperty.all(Colors.transparent),
+                overlayColor: MaterialStateProperty.all(Colors.transparent),
               ),
               child: Text(
                 'Add address line +',
