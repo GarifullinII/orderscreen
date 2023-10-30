@@ -31,25 +31,28 @@ class Button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => ElevatedButton(
-    style: style ?? ElevatedButton.styleFrom(
-      elevation: 1,
-      padding: const EdgeInsets.symmetric(horizontal: 46, vertical: 6),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(36),
-      ),
-      backgroundColor: ColorConstants.inactiveButtonColor,
-    ),
-    onPressed: interact,
-    child: child ??
-        Text(
-          label ?? '',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontFamily: 'Roboto',
-            color: ColorConstants.inactiveButtonTextColor,
-            fontSize: 14,
-            fontWeight: FontWeight.w400,
-          ),
-        ),
-  );
+        style: style ??
+            ElevatedButton.styleFrom(
+              elevation: 1,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(36),
+              ),
+              foregroundColor: ColorConstants.activeButtonColor,
+              backgroundColor: ColorConstants.inactiveButtonColor,
+              shadowColor: ColorConstants.activeButtonColor,
+              minimumSize: const Size(164, 33),
+            ),
+        onPressed: interact,
+        child: child ??
+            Text(
+              label ?? '',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontFamily: 'Roboto',
+                color: ColorConstants.inactiveButtonTextColor,
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+      );
 }

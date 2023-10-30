@@ -37,7 +37,7 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) => AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: ColorConstants.activeButtonTextColor,
         leading: leadAction
             ? IconButton(
                 onPressed: () {},
