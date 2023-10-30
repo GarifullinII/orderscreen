@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:orderscreen/views/pages/widgets/button.dart';
 import 'package:orderscreen/views/pages/widgets/order_input.dart';
-import 'package:orderscreen/views/pages/widgets/recipientaddressform_widget.dart';
-import 'package:orderscreen/views/pages/widgets/senderdetailsform_widget.dart';
+import 'package:orderscreen/views/pages/widgets/form_widget.dart';
 import 'package:orderscreen/views/pages/widgets/topbar.dart';
 import '../../utils/constants.dart';
 
@@ -70,7 +69,16 @@ class Order extends StatelessWidget {
                 ),
               ),
             ),
-            const SenderDetailsFormWidget(),
+            const FormWidget(
+              labelText: 'Sender details',
+              nameLabel: 'Danilev Egor',
+              emailLabel: 'egor_zu@email.com',
+              phoneLabel: '+375726014690',
+              countryLabel: 'Belarus',
+              cityLabel: 'Minsk',
+              addressLabel: 'Derzhinskogo 3b',
+              postcodeLabel: '220069',
+            ),
             ColoredBox(
               color: ColorConstants.backgroundIntervalColor,
               child: const Align(
@@ -80,7 +88,16 @@ class Order extends StatelessWidget {
                 ),
               ),
             ),
-            const RecipientAddressFormWidget(),
+            const FormWidget(
+              labelText: 'Recipient address',
+              nameLabel: 'Ko Yuri',
+              emailLabel: 'yuri@email.com',
+              phoneLabel: '+375294545687',
+              countryLabel: 'Italy',
+              cityLabel: 'Naple',
+              addressLabel: 'Via Toledo 256',
+              postcodeLabel: '80100',
+            ),
             Padding(
               padding: const EdgeInsets.only(top: 16, bottom: 26),
               child: Button(

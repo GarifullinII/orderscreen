@@ -5,10 +5,62 @@ import '../address.dart';
 import 'button.dart';
 import 'order_input.dart';
 
-class SenderDetailsFormWidget extends StatelessWidget {
-  const SenderDetailsFormWidget({
+class FormWidget extends StatelessWidget {
+  /// Constructor
+  /// @param labelText - Label with order or address
+  /// @param widgetButton - Widget with buttons
+  /// @param labelTextField - Label over TextFieldForm
+  /// @param nameLabel - Label with full name
+  /// @param emailLabel - Label with email
+  /// @param phoneLabel - Label with phone
+  /// @param countryLabel - Label with country
+  /// @param cityLabel - Label with city
+  /// @param addressLabel - Label with address line one
+  /// @param postcodeLabel - Label with postcode
+
+  const FormWidget({
+    required this.labelText,
+    this.widgetButton,
+    this.labelTextField,
+    this.nameLabel,
+    this.emailLabel,
+    this.phoneLabel,
+    this.countryLabel,
+    this.cityLabel,
+    this.addressLabel,
+    this.postcodeLabel,
     super.key,
   });
+
+  /// Label with details
+  final String labelText;
+
+  /// Widget with buttons
+  final Widget? widgetButton;
+
+  /// Label over TextFieldForm
+  final String? labelTextField;
+
+  /// Label with full name
+  final String? nameLabel;
+
+  /// Label with email
+  final String? emailLabel;
+
+  /// Label with phone
+  final String? phoneLabel;
+
+  /// Label with country
+  final String? countryLabel;
+
+  /// Label with city
+  final String? cityLabel;
+
+  /// Label with address line one
+  final String? addressLabel;
+
+  /// Label with postcode
+  final String? postcodeLabel;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +71,7 @@ class SenderDetailsFormWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20, top: 20, bottom: 16),
             child: Text(
-              'Sender details',
+              labelText,
               style: TextStyle(
                 fontFamily: 'Roboto',
                 fontSize: 16,
@@ -34,6 +86,7 @@ class SenderDetailsFormWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                widgetButton ??
                 Button(
                   interact: () {
                     Navigator.push(
@@ -74,7 +127,7 @@ class SenderDetailsFormWidget extends StatelessWidget {
           ),
           OrderInput(
             onChange: (String value) {},
-            labelOverTextField: 'Full name*',
+            labelOverTextField: labelTextField ?? 'Full name*',
             widgetPrefix: SvgPicture.asset(
               'assets/images/man.svg',
               colorFilter: ColorFilter.mode(
@@ -82,11 +135,11 @@ class SenderDetailsFormWidget extends StatelessWidget {
                 BlendMode.srcIn,
               ),
             ),
-            hint: 'Danilev Egor',
+            hint: nameLabel ?? '',
           ),
           OrderInput(
             onChange: (String value) {},
-            labelOverTextField: 'Email*',
+            labelOverTextField: labelTextField ?? 'Email*',
             widgetPrefix: SvgPicture.asset(
               'assets/images/email.svg',
               colorFilter: ColorFilter.mode(
@@ -94,11 +147,11 @@ class SenderDetailsFormWidget extends StatelessWidget {
                 BlendMode.srcIn,
               ),
             ),
-            hint: 'egor_zu@email.com',
+            hint: emailLabel ?? '',
           ),
           OrderInput(
             onChange: (String value) {},
-            labelOverTextField: 'Phone number*',
+            labelOverTextField: labelTextField ?? 'Phone number*',
             widgetPrefix: SvgPicture.asset(
               'assets/images/phone.svg',
               colorFilter: ColorFilter.mode(
@@ -106,7 +159,7 @@ class SenderDetailsFormWidget extends StatelessWidget {
                 BlendMode.srcIn,
               ),
             ),
-            hint: '+375726014690',
+            hint: phoneLabel ?? '',
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20, top: 16, right: 20),
@@ -117,7 +170,7 @@ class SenderDetailsFormWidget extends StatelessWidget {
           ),
           OrderInput(
             onChange: (String value) {},
-            labelOverTextField: 'Country*',
+            labelOverTextField: labelTextField ?? 'Country*',
             widgetPrefix: SvgPicture.asset(
               'assets/images/mapdot.svg',
               colorFilter: ColorFilter.mode(
@@ -125,11 +178,11 @@ class SenderDetailsFormWidget extends StatelessWidget {
                 BlendMode.srcIn,
               ),
             ),
-            hint: 'Belarus',
+            hint: countryLabel ?? '',
           ),
           OrderInput(
             onChange: (String value) {},
-            labelOverTextField: 'City*',
+            labelOverTextField: labelTextField ?? 'City*',
             widgetPrefix: SvgPicture.asset(
               'assets/images/city.svg',
               colorFilter: ColorFilter.mode(
@@ -137,11 +190,11 @@ class SenderDetailsFormWidget extends StatelessWidget {
                 BlendMode.srcIn,
               ),
             ),
-            hint: 'Minsk',
+            hint: cityLabel ?? '',
           ),
           OrderInput(
             onChange: (String value) {},
-            labelOverTextField: 'Address line 1*',
+            labelOverTextField: labelTextField ?? 'Address line 1*',
             widgetPrefix: SvgPicture.asset(
               'assets/images/mappin.svg',
               colorFilter: ColorFilter.mode(
@@ -149,7 +202,7 @@ class SenderDetailsFormWidget extends StatelessWidget {
                 BlendMode.srcIn,
               ),
             ),
-            hint: 'Derzhinskogo 3b',
+            hint: addressLabel ?? '',
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20),
@@ -174,7 +227,7 @@ class SenderDetailsFormWidget extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 20),
             child: OrderInput(
               onChange: (String value) {},
-              labelOverTextField: 'Postcode*',
+              labelOverTextField: labelTextField ?? 'Postcode*',
               widgetPrefix: SvgPicture.asset(
                 'assets/images/postcode.svg',
                 colorFilter: ColorFilter.mode(
@@ -182,7 +235,7 @@ class SenderDetailsFormWidget extends StatelessWidget {
                   BlendMode.srcIn,
                 ),
               ),
-              hint: '220069',
+              hint: postcodeLabel ?? '220069',
             ),
           ),
         ],
