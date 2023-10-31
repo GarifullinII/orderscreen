@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orderscreen/views/pages/widgets/address_form_widget.dart';
 import 'package:orderscreen/views/pages/widgets/button.dart';
 import 'package:orderscreen/views/pages/widgets/topbar.dart';
-
 import '../../utils/constants.dart';
-// import '../../utils/constants.dart';
 
 ///  Address pages
 class Address extends StatelessWidget {

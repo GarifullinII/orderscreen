@@ -88,37 +88,37 @@ class FormWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 widgetButton ??
-                Button(
-                  interact: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Address(),
+                    Button(
+                      interact: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Address(),
+                          ),
+                        );
+                      },
+                      label: 'Add address',
+                      style: ElevatedButton.styleFrom(
+                        elevation: 1,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(36),
+                        ),
+                        backgroundColor: ColorConstants.activeButtonColor,
+                        foregroundColor: ColorConstants.activeButtonColor,
+                        shadowColor: ColorConstants.activeButtonColor,
+                        minimumSize: const Size(164, 33),
                       ),
-                    );
-                  },
-                  label: 'Add address',
-                  style: ElevatedButton.styleFrom(
-                    elevation: 1,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(36),
+                      child: Text(
+                        'Add address',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: 'Roboto',
+                          color: ColorConstants.activeButtonTextColor,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
                     ),
-                    backgroundColor: ColorConstants.activeButtonColor,
-                    foregroundColor: ColorConstants.activeButtonColor,
-                    shadowColor: ColorConstants.activeButtonColor,
-                    minimumSize: const Size(164, 33),
-                  ),
-                  child: Text(
-                    'Add address',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontFamily: 'Roboto',
-                      color: ColorConstants.activeButtonTextColor,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ),
                 Button(
                   interact: () {},
                   label: 'Select address',
