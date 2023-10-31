@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../utils/constants.dart';
 import '../address.dart';
@@ -153,6 +154,7 @@ class FormWidget extends StatelessWidget {
           ),
           Input(
             keyboardType: TextInputType.phone,
+            textInputFormatter: [FilteringTextInputFormatter.digitsOnly],
             onChange: (String value) {},
             labelOverTextField: labelTextField ?? 'Phone number*',
             widgetPrefix: SvgPicture.asset(
