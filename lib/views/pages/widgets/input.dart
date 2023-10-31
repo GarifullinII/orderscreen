@@ -110,9 +110,9 @@ class _InputState extends State<Input> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: TextFormField(
+              controller: controller,
               keyboardType: widget.keyboardType,
               autofocus: widget.autofocus,
-              controller: controller,
               onChanged: widget.onChange,
               obscureText: _hidden,
               enableSuggestions: false,
@@ -181,7 +181,7 @@ class _InputState extends State<Input> {
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
                   borderSide: BorderSide(
-                    color: ColorConstants.borderColor,
+                    color: ColorConstants.activeButtonColor,
                     width: 0.5,
                   ),
                 ),
