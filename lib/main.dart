@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orderscreen/views/pages/order.dart';
 
-void main() {
-  final WidgetsBinding widgetsBinding =
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const MyApp());

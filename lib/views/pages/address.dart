@@ -74,7 +74,7 @@ class Address extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 16, bottom: 26),
+              padding: const EdgeInsets.only(left: 20, top: 16, right: 20, bottom: 26),
               child: Button(
                 interact: () {},
                 style: ElevatedButton.styleFrom(
@@ -85,7 +85,7 @@ class Address extends StatelessWidget {
                   backgroundColor: ColorConstants.activeButtonColor,
                   foregroundColor: ColorConstants.activeButtonColor,
                   shadowColor: ColorConstants.activeButtonColor,
-                  minimumSize: const Size(335, 53),
+                  minimumSize: const Size(336, 53),
                 ),
                 child: Text(
                   'Next step',
