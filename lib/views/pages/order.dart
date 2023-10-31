@@ -48,6 +48,7 @@ class Order extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(bottom: 12),
               child: Input(
+                keyboardType: TextInputType.datetime,
                 onChange: (String value) {},
                 labelOverTextField: 'Start date',
                 widgetPrefix: SvgPicture.asset(

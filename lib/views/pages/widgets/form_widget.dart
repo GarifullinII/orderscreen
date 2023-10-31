@@ -139,6 +139,7 @@ class FormWidget extends StatelessWidget {
             hint: nameLabel ?? '',
           ),
           Input(
+            keyboardType: TextInputType.emailAddress,
             onChange: (String value) {},
             labelOverTextField: labelTextField ?? 'Email*',
             widgetPrefix: SvgPicture.asset(
@@ -151,6 +152,7 @@ class FormWidget extends StatelessWidget {
             hint: emailLabel ?? '',
           ),
           Input(
+            keyboardType: TextInputType.phone,
             onChange: (String value) {},
             labelOverTextField: labelTextField ?? 'Phone number*',
             widgetPrefix: SvgPicture.asset(
@@ -227,6 +229,7 @@ class FormWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(bottom: 20),
             child: Input(
+              keyboardType: TextInputType.number,
               onChange: (String value) {},
               labelOverTextField: labelTextField ?? 'Postcode*',
               widgetPrefix: SvgPicture.asset(
