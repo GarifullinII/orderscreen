@@ -6,7 +6,6 @@ import '../../../utils/constants.dart';
 class Input extends StatefulWidget {
   /// Constructor
   /// @param onChange - Input on input submitted
-  /// @param labelOverTextField - Label over TextFormField
   /// @param widgetPrefix - Widget for prefixIcon
   /// @param hint - Input hint
   /// @param hidden - Is input hidden
@@ -21,7 +20,6 @@ class Input extends StatefulWidget {
 
   const Input({
     required this.onChange,
-    this.labelOverTextField,
     this.widgetPrefix,
     this.hint,
     this.hidden = false,
@@ -38,9 +36,6 @@ class Input extends StatefulWidget {
 
   /// Input on input submitted
   final ValueChanged<String>? onChange;
-
-  /// Label over TextFormField
-  final String? labelOverTextField;
 
   /// Widget for prefixIcon
   final Widget? widgetPrefix;
@@ -100,19 +95,6 @@ class _InputState extends State<Input> {
   Widget build(BuildContext context) => Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 20, top: 12, bottom: 8),
-            child: widget.widgetOverTextField ??
-                Text(
-                  widget.labelOverTextField ?? '',
-                  style: TextStyle(
-                    fontFamily: 'Roboto',
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                    color: ColorConstants.labelColor,
-                  ),
-                ),
-          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: TextFormField(

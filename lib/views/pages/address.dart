@@ -72,7 +72,7 @@ class Address extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20, top: 16, right: 20, bottom: 26),
+              padding: const EdgeInsets.only(top: 26, bottom: 26),
               child: Button(
                 interact: () {},
                 style: ElevatedButton.styleFrom(

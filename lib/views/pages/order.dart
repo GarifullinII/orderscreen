@@ -18,6 +18,7 @@ class Order extends StatelessWidget {
       appBar: const TopBar(label: 'Ordering'),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Divider(
               color: ColorConstants.dividerColor,
@@ -46,11 +47,22 @@ class Order extends StatelessWidget {
               ),
             ),
             Padding(
+              padding: const EdgeInsets.only(left: 20, top: 20, bottom: 8),
+              child: Text(
+                'Start date',
+                style: TextStyle(
+                  fontFamily: 'Roboto',
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: ColorConstants.labelColor,
+                ),
+              ),
+            ),
+            Padding(
               padding: const EdgeInsets.only(bottom: 12),
               child: Input(
                 keyboardType: TextInputType.datetime,
                 onChange: (String value) {},
-                labelOverTextField: 'Start date',
                 widgetPrefix: SvgPicture.asset(
                   'assets/images/calendar.svg',
                   colorFilter: ColorFilter.mode(
@@ -99,28 +111,30 @@ class Order extends StatelessWidget {
               addressLabel: 'Via Toledo 256',
               postcodeLabel: '80100',
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 16, bottom: 26),
-              child: Button(
-                interact: () {},
-                style: ElevatedButton.styleFrom(
-                  elevation: 1,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50),
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 16, bottom: 26),
+                child: Button(
+                  interact: () {},
+                  style: ElevatedButton.styleFrom(
+                    elevation: 1,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    backgroundColor: ColorConstants.activeButtonColor,
+                    foregroundColor: ColorConstants.activeButtonColor,
+                    shadowColor: ColorConstants.activeButtonColor,
+                    minimumSize: const Size(335, 53),
                   ),
-                  backgroundColor: ColorConstants.activeButtonColor,
-                  foregroundColor: ColorConstants.activeButtonColor,
-                  shadowColor: ColorConstants.activeButtonColor,
-                  minimumSize: const Size(335, 53),
-                ),
-                child: Text(
-                  'Next step',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontFamily: 'Roboto',
-                    color: ColorConstants.activeButtonTextColor,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
+                  child: Text(
+                    'Next step',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontFamily: 'Roboto',
+                      color: ColorConstants.activeButtonTextColor,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
               ),

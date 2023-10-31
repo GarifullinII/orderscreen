@@ -46,7 +46,7 @@ class AddressFormWidget extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.only(left: 10, right: 10, bottom: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -94,12 +94,15 @@ class AddressFormWidget extends StatelessWidget {
             ),
             hint: searchLabel ?? '',
           ),
-          Input(
-            onChange: (String value) {},
-            widgetOverTextField: const Spacer(),
-            valueMaxLines: 2,
-            showPrefixIcon: false,
-            hint: addressLabel ?? '',
+          Padding(
+            padding: const EdgeInsets.only(top: 12),
+            child: Input(
+              onChange: (String value) {},
+              widgetOverTextField: const Spacer(),
+              valueMaxLines: 2,
+              showPrefixIcon: false,
+              hint: addressLabel ?? '',
+            ),
           ),
         ],
       ),

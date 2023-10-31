@@ -71,7 +71,7 @@ class FormWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 20, top: 20, bottom: 16),
+            padding: const EdgeInsets.only(left: 20, top: 12, bottom: 16),
             child: Text(
               labelText,
               style: TextStyle(
@@ -127,9 +127,20 @@ class FormWidget extends StatelessWidget {
               ],
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 20, top: 20, bottom: 8),
+            child: Text(
+              'Full name*',
+              style: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+                color: ColorConstants.labelColor,
+              ),
+            ),
+          ),
           Input(
             onChange: (String value) {},
-            labelOverTextField: labelTextField ?? 'Full name*',
             widgetPrefix: SvgPicture.asset(
               'assets/images/man.svg',
               colorFilter: ColorFilter.mode(
@@ -139,10 +150,21 @@ class FormWidget extends StatelessWidget {
             ),
             hint: nameLabel ?? '',
           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 20, top: 20, bottom: 8),
+            child: Text(
+              'Email*',
+              style: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+                color: ColorConstants.labelColor,
+              ),
+            ),
+          ),
           Input(
             keyboardType: TextInputType.emailAddress,
             onChange: (String value) {},
-            labelOverTextField: labelTextField ?? 'Email*',
             widgetPrefix: SvgPicture.asset(
               'assets/images/email.svg',
               colorFilter: ColorFilter.mode(
@@ -152,11 +174,22 @@ class FormWidget extends StatelessWidget {
             ),
             hint: emailLabel ?? '',
           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 20, top: 20, bottom: 8),
+            child: Text(
+              'Phone number*',
+              style: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+                color: ColorConstants.labelColor,
+              ),
+            ),
+          ),
           Input(
             keyboardType: TextInputType.phone,
             textInputFormatter: [FilteringTextInputFormatter.digitsOnly],
             onChange: (String value) {},
-            labelOverTextField: labelTextField ?? 'Phone number*',
             widgetPrefix: SvgPicture.asset(
               'assets/images/phone.svg',
               colorFilter: ColorFilter.mode(
@@ -173,9 +206,20 @@ class FormWidget extends StatelessWidget {
               height: 0.5,
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 20, top: 20, bottom: 8),
+            child: Text(
+              'Country*',
+              style: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+                color: ColorConstants.labelColor,
+              ),
+            ),
+          ),
           Input(
             onChange: (String value) {},
-            labelOverTextField: labelTextField ?? 'Country*',
             widgetPrefix: SvgPicture.asset(
               'assets/images/mapdot.svg',
               colorFilter: ColorFilter.mode(
@@ -185,9 +229,20 @@ class FormWidget extends StatelessWidget {
             ),
             hint: countryLabel ?? '',
           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 20, top: 20, bottom: 8),
+            child: Text(
+              'City*',
+              style: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+                color: ColorConstants.labelColor,
+              ),
+            ),
+          ),
           Input(
             onChange: (String value) {},
-            labelOverTextField: labelTextField ?? 'City*',
             widgetPrefix: SvgPicture.asset(
               'assets/images/city.svg',
               colorFilter: ColorFilter.mode(
@@ -197,9 +252,20 @@ class FormWidget extends StatelessWidget {
             ),
             hint: cityLabel ?? '',
           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 20, top: 20, bottom: 8),
+            child: Text(
+              'Address line 1*',
+              style: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+                color: ColorConstants.labelColor,
+              ),
+            ),
+          ),
           Input(
             onChange: (String value) {},
-            labelOverTextField: labelTextField ?? 'Address line 1*',
             widgetPrefix: SvgPicture.asset(
               'assets/images/mappin.svg',
               colorFilter: ColorFilter.mode(
@@ -229,11 +295,22 @@ class FormWidget extends StatelessWidget {
             ),
           ),
           Padding(
+            padding: const EdgeInsets.only(left: 20, top: 20, bottom: 8),
+            child: Text(
+              'Postcode*',
+              style: TextStyle(
+                fontFamily: 'Roboto',
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+                color: ColorConstants.labelColor,
+              ),
+            ),
+          ),
+          Padding(
             padding: const EdgeInsets.only(bottom: 20),
             child: Input(
               keyboardType: TextInputType.number,
               onChange: (String value) {},
-              labelOverTextField: labelTextField ?? 'Postcode*',
               widgetPrefix: SvgPicture.asset(
                 'assets/images/postcode.svg',
                 colorFilter: ColorFilter.mode(
