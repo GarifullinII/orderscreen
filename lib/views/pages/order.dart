@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:orderscreen/views/pages/widgets/button.dart';
-import 'package:orderscreen/views/pages/widgets/order_input.dart';
+import 'package:orderscreen/views/pages/widgets/input.dart';
 import 'package:orderscreen/views/pages/widgets/form_widget.dart';
 import 'package:orderscreen/views/pages/widgets/topbar.dart';
 import '../../utils/constants.dart';
@@ -47,7 +47,7 @@ class Order extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(bottom: 12),
-              child: OrderInput(
+              child: Input(
                 onChange: (String value) {},
                 labelOverTextField: 'Start date',
                 widgetPrefix: SvgPicture.asset(

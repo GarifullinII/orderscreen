@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../../utils/constants.dart';
 import '../address.dart';
 import 'button.dart';
-import 'order_input.dart';
+import 'input.dart';
 
 ///  Form widget
 class FormWidget extends StatelessWidget {
@@ -126,7 +126,7 @@ class FormWidget extends StatelessWidget {
               ],
             ),
           ),
-          OrderInput(
+          Input(
             onChange: (String value) {},
             labelOverTextField: labelTextField ?? 'Full name*',
             widgetPrefix: SvgPicture.asset(
@@ -138,7 +138,7 @@ class FormWidget extends StatelessWidget {
             ),
             hint: nameLabel ?? '',
           ),
-          OrderInput(
+          Input(
             onChange: (String value) {},
             labelOverTextField: labelTextField ?? 'Email*',
             widgetPrefix: SvgPicture.asset(
@@ -150,7 +150,7 @@ class FormWidget extends StatelessWidget {
             ),
             hint: emailLabel ?? '',
           ),
-          OrderInput(
+          Input(
             onChange: (String value) {},
             labelOverTextField: labelTextField ?? 'Phone number*',
             widgetPrefix: SvgPicture.asset(
@@ -169,7 +169,7 @@ class FormWidget extends StatelessWidget {
               height: 0.5,
             ),
           ),
-          OrderInput(
+          Input(
             onChange: (String value) {},
             labelOverTextField: labelTextField ?? 'Country*',
             widgetPrefix: SvgPicture.asset(
@@ -181,7 +181,7 @@ class FormWidget extends StatelessWidget {
             ),
             hint: countryLabel ?? '',
           ),
-          OrderInput(
+          Input(
             onChange: (String value) {},
             labelOverTextField: labelTextField ?? 'City*',
             widgetPrefix: SvgPicture.asset(
@@ -193,7 +193,7 @@ class FormWidget extends StatelessWidget {
             ),
             hint: cityLabel ?? '',
           ),
-          OrderInput(
+          Input(
             onChange: (String value) {},
             labelOverTextField: labelTextField ?? 'Address line 1*',
             widgetPrefix: SvgPicture.asset(
@@ -226,7 +226,7 @@ class FormWidget extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(bottom: 20),
-            child: OrderInput(
+            child: Input(
               onChange: (String value) {},
               labelOverTextField: labelTextField ?? 'Postcode*',
               widgetPrefix: SvgPicture.asset(

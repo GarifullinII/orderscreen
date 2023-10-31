@@ -10,4 +10,5 @@ class ColorConstants {
   static Color inactiveButtonColor = const Color(0xFF919EAB);
   static Color activeButtonTextColor = const Color(0xFFFFFFFF);
   static Color inactiveButtonTextColor = const Color(0xFFE7ECF0);
+  static Color errorColor = const Color(0xFFB00000);
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../utils/constants.dart';
 
 /// Input widget
-class OrderInput extends StatefulWidget {
+class Input extends StatefulWidget {
   /// Constructor
   /// @param onChange - Input on input submitted
   /// @param labelOverTextField - Label over TextFormField
@@ -17,7 +17,7 @@ class OrderInput extends StatefulWidget {
   /// @param valueMaxLines - Value maxLines
   /// @param showPrefixIcon - Show prefix icon
 
-  const OrderInput({
+  const Input({
     required this.onChange,
     this.labelOverTextField,
     this.widgetPrefix,
@@ -70,10 +70,10 @@ class OrderInput extends StatefulWidget {
   final bool showPrefixIcon;
 
   @override
-  State<OrderInput> createState() => _OrderInputState();
+  State<Input> createState() => _InputState();
 }
 
-class _OrderInputState extends State<OrderInput> {
+class _InputState extends State<Input> {
   /// Is input hidden
   late bool _hidden;
 
@@ -135,6 +135,8 @@ class _OrderInputState extends State<OrderInput> {
               ),
               maxLines: widget.valueMaxLines ?? 1,
               decoration: InputDecoration(
+                isCollapsed: true,
+                contentPadding: const EdgeInsets.only(top: 20, left: 16, bottom: 20),
                 filled: widget.showPrefixIcon ? false : true,
                 fillColor: ColorConstants.labelColor,
                 suffixIcon: widget.showPrefixIcon
@@ -155,6 +157,7 @@ class _OrderInputState extends State<OrderInput> {
                       )
                     : null,
                 hintText: widget.hint,
+                hintMaxLines: 2,
                 hintStyle: widget.showPrefixIcon
                     ? TextStyle(
                         fontFamily: 'Roboto',
@@ -192,14 +195,14 @@ class _OrderInputState extends State<OrderInput> {
                 errorBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
                   borderSide: BorderSide(
-                    color: ColorConstants.borderColor,
+                    color: ColorConstants.errorColor,
                     width: 0.5,
                   ),
                 ),
                 focusedErrorBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
                   borderSide: BorderSide(
-                    color: ColorConstants.borderColor,
+                    color: ColorConstants.errorColor,
                     width: 0.5,
                   ),
                 ),

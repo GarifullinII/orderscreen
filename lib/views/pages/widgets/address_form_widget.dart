@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../../utils/constants.dart';
 import 'button.dart';
-import 'order_input.dart';
+import 'input.dart';
 
 ///  AddressForm widget
 class AddressFormWidget extends StatelessWidget {
@@ -82,7 +82,7 @@ class AddressFormWidget extends StatelessWidget {
               ],
             ),
           ),
-          OrderInput(
+          Input(
             onChange: (String value) {},
             widgetOverTextField: const Spacer(),
             widgetPrefix: SvgPicture.asset(
@@ -94,7 +94,7 @@ class AddressFormWidget extends StatelessWidget {
             ),
             hint: searchLabel ?? '',
           ),
-          OrderInput(
+          Input(
             onChange: (String value) {},
             widgetOverTextField: const Spacer(),
             valueMaxLines: 2,
