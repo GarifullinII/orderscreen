@@ -75,6 +75,7 @@ class Input extends StatefulWidget {
 }
 
 class _InputState extends State<Input> {
+
   /// Is input hidden
   late bool _hidden;
 
@@ -86,6 +87,12 @@ class _InputState extends State<Input> {
     super.initState();
     _hidden = widget.hidden;
     _interacting = widget.interacting;
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
   }
 
   /// Input controller
