@@ -140,7 +140,6 @@ class FormWidget extends StatelessWidget {
             ),
           ),
           Input(
-            validator: (value) => value!.isEmpty ? 'Full name is required' : null,
             onChange: (String value) {},
             widgetPrefix: SvgPicture.asset(
               'assets/images/man.svg',
