@@ -82,8 +82,9 @@ class Order extends StatelessWidget {
                 ),
               ),
             ),
-            const FormWidget(
+            FormWidget(
               labelText: 'Sender details',
+              formWidgetKey: GlobalKey<FormState>(),
               nameLabel: 'Danilev Egor',
               emailLabel: 'egor_zu@email.com',
               phoneLabel: '+375726014690',
@@ -101,8 +102,9 @@ class Order extends StatelessWidget {
                 ),
               ),
             ),
-            const FormWidget(
+            FormWidget(
               labelText: 'Recipient address',
+              formWidgetKey: GlobalKey<FormState>(),
               nameLabel: 'Ko Yuri',
               emailLabel: 'yuri@email.com',
               phoneLabel: '+375294545687',

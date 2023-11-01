@@ -19,9 +19,11 @@ class FormWidget extends StatelessWidget {
   /// @param cityLabel - Label with city
   /// @param addressLabel - Label with address line one
   /// @param postcodeLabel - Label with postcode
+  /// @param formWidgetKey - Key for form
 
   const FormWidget({
     required this.labelText,
+    required this.formWidgetKey,
     this.widgetButton,
     this.labelTextField,
     this.nameLabel,
@@ -36,6 +38,9 @@ class FormWidget extends StatelessWidget {
 
   /// Label with details
   final String labelText;
+
+  /// key for form
+  final GlobalKey<FormState> formWidgetKey;
 
   /// Widget with buttons
   final Widget? widgetButton;
@@ -67,6 +72,7 @@ class FormWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Form(
+      key: formWidgetKey,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
